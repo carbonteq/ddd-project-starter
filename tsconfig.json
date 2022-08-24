@@ -22,10 +22,22 @@
           "es2020.bigint",
           "es2020.string",
           "dom"
-        ]
+        ],
+        "baseUrl": "./",
+        "paths": {
+            "@application/*": ["App/Application/*"],
+            "@domain/*": ["App/Domain/*"],
+            "@http/*": ["HTTP/*"],
+            "@controller/*": ["HTTP/Controllers/*"],
+            "@routes/*": ["HTTP/Routes/*"],
+            "@infrastructure/*": ["App/Infrastructure/*"],
+            "@bootstrap/*":["HTTP/Bootstrap/*"]
+        }
     },
     "include": [
-        "**/*"
+        "App/**/*.ts",
+        "Bin",
+        "HTTP/**/*.ts"
     ],
     "exclude": [
         "node_modules",
